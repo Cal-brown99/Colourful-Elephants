@@ -12,23 +12,28 @@
     <title>The Colourful Animal Game</title>
 </head>
 
-<body class="col-md-12 bg-title-home">
+<body>
     
     <header>
-        <div>
-            <div class="row">
-                <a href="index.html" class="title-border">
-                    <h1 class="title">Colour Matching</h1>
-                </a>
-            </div>
-        </div>
+    <!-- Navigation bar for the desktop, loaded once user has clicked play -->
+        <nav class="navbar navbar-expand navbar-bg fixed-top">
+			<div id="desktop-nav" class="desktop-nav">
+				<ul class="navbar-nav mr-auto">
+					<li id="logo">Colour Matching!</li>
+					<li class="nav-item mr-2">
+						<a class="nav-link" href="index.html">
+							<p>Play Now</p>
+						</a>
+					</li>
+					<li class="nav-item mr-2">
+						<a class="nav-link" href="#sign-up">
+							<p>Sign Up</p>
+						</a>
+					</li>
+				</ul>
+			</div>
     </header>
 
-    <span class="message-area">
-            <p class="message-content">
-                How good is your memory? How about we put it to the test, just click below to start your fun memory game.
-            </p>
-    </span>
     <script src="assets/js/main.min.js"></script>
 </body>
 
