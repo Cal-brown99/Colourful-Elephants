@@ -52,6 +52,31 @@ body {
   display: none;
 }
 
+/*------------------------------------------------------------------------ Rules */
+
+#rules {
+    display: block;
+    width: 100%;
+    padding: 10%;
+}
+
+.rules-text {
+    color: #261101;
+    font-size: 120%;
+    font-family: "Texturina", sans-serif;  
+    padding: 2%;
+    margin: 0;
+    margin-left: 500px;
+    width: 40%;
+}
+
+h2 {
+    color: yellow;
+    text-align: center;
+    font-family: "Texturina", sans-serif;
+    margin: 2px;
+}
+
 /*------------------------------------------------------------------------ Footer */
 
 footer {
@@ -101,5 +126,29 @@ footer {
 .nav-item {
     font-size: 50%;
     margin-top: -3px;
+}
+
+/*------------------------------------------------------------------------ Media Queries - Rules */
+
+#rules {
+    padding-top: 25%;
+    font-size: 70%;
+}
+
+.rules-text {
+    width: 100%;
+    margin-left: 0px;
+}
+
+/*------------------------------------------------------------------------ Media Queries - Footer */
+
+footer {
+    max-width: 100%;
+    max-height: 50px;
+}
+
+.social-links {
+  margin: 0;
+  padding:0;
 }
 }
