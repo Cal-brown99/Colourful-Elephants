@@ -30,3 +30,46 @@ body {
   color: yellow;
   margin: 1% 5% 1% 5%;
 }
+
+.mobile-nav {
+  font-size: 100%;
+  max-width: 100%;
+  text-align: center;
+}
+
+#logo-mobile {
+  font-family: "Texturina", "Sans-serif";
+  font-size: 60%;
+  color: yellow;
+}
+
+.mobile-nav i {
+  font-size: 100%;
+  color: yellow;
+}
+
+#mobile-nav {
+  display: none;
+}
+
+/*------------------------------------------------------------------------ Media Queries */
+
+@media only screen and (max-width:950px) {
+
+/*------------------------------------------------------------------------ Media Queries - Navigation bar */
+
+#desktop-nav {
+    display: none;
+}
+
+#mobile-nav {
+    display: block;
+    max-height: 50px;
+    padding: 0;
+}
+
+.nav-item {
+    font-size: 50%;
+    margin-top: -3px;
+}
+}
