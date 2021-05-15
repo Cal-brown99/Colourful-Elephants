@@ -77,6 +77,39 @@ h2 {
     margin: 2px;
 }
 
+/*------------------------------------------------------------------------ Sign up form */
+
+#sign-up {
+    display: block;
+    width: 100%;
+    padding: 5%;
+    margin: 0 0 5% 0;
+    font-family: "Texturina", "Sans-serif";  
+    color: #261101;
+    font-size: 120%;
+    text-align: center;
+  
+}
+
+#email-text {
+    text-align: center;
+    padding-top: 10px;
+    font-size: 120%;
+    color: yellow;
+}
+
+#email-sign-up {
+     font-family: "Texturina", "Sans-serif";
+     margin-bottom: 20px;
+     text-align: center;
+}
+
+.enter-email {
+    color: yellow;
+    font-family: "Texturina", "Sans-serif";
+}
+
+
 /*------------------------------------------------------------------------ Footer */
 
 footer {
@@ -138,6 +171,32 @@ footer {
 .rules-text {
     width: 100%;
     margin-left: 0px;
+}
+
+/*------------------------------------------------------------------------ Media Queries - Sign up form */
+
+#sign-up {
+    margin-bottom: 70px;
+    padding: 6%;
+    border: none;
+}
+
+#enter-email {
+    padding: 5%;
+}
+
+#email-text {
+    font-size: 100%;
+    padding: 5px;
+    margin: 0;
+}
+
+#sign-up-submit {
+    margin-top: 2%;
+}
+
+#email {
+    width: 70%;
 }
 
 /*------------------------------------------------------------------------ Media Queries - Footer */
