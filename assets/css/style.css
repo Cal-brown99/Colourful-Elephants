@@ -13,7 +13,7 @@ body {
   font-family: "Texturina", "Sans-sarif";
   font-size: 300%;
   color: yellow;
-  background-color: #0A420A;
+  background-color: #261101;
   display: inline;
   width: 100%;
   text-align: center;
@@ -50,6 +50,36 @@ body {
 
 #mobile-nav {
   display: none;
+}
+
+/*------------------------------------------------------------------------ Footer */
+
+footer {
+  height: 80px;
+  width: 100%;
+  margin: 0;
+  padding: 1%;
+  background-color: #261101;
+  position: fixed;
+  align-content: center;
+  bottom: 0;
+  left: 0;
+}
+
+.footer-links {
+  text-align: center;
+}
+
+.footer-links li {
+  display: inline;
+  margin: 10px;
+}
+
+.footer-links i {
+  font-size: 200%;
+  margin: 0;
+  padding: 0.5%;
+  color: yellow;
 }
 
 /*------------------------------------------------------------------------ Media Queries */
