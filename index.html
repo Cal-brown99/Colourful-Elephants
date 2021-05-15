@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" type="text/css"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
-    <link rel="icon" href="assets/images/favicon.ico" sizes="16x16" type="image/png">
-    <title>The Colourful Animal Game</title>
+    <link rel="icon" href="assets/images/favicon.png" sizes="16x16" type="image/png">
+    <title>Colourful Elephants</title>
 </head>
 
 <body>
@@ -55,30 +55,45 @@
         </nav>
         
     </header>
+
+    <!-- Game will be displayed here and the timer with the score. -->
+    <div id="game-area">
+		<div id="main-gameboard" class="game-board d-none">
+			<div class="game-info">
+				<div class="time-answers"> Time <span id="time-left"></span></div>
+                <div class="time-answers"> Correct answers :) <span id="right">0</span></div>
+                <div class="time-answers"> Incorrect answers :( <span id="wrong">0</span></div>
+			</div>
+		</div>
+    </div>
+    
     <!-- Rules section that is hidden initially until you click the rules button. -->
     <div id="rules">
 		<h2>Rules:</h2>
 		<ul class="rules-text">
             <li> A piece of text will appear with a colour stated.</li>
-            <li> There will be 6 different animals that have different colours.</li>
-            <li> Within these animals lies a piece of text with a colour written out.</li>
-            <li> You have to match the statement with the text within the animal.</li>
-            <li> Be careful not to base your answer off the actual colour of the animal, otherwise it'll be incorrect.</li>
+            <li> There will be 6 different elephants that have different colours.</li>
+            <li> Within these elephants lies a piece of text with a colour written out.</li>
+            <li> You have to match the statement with the text within the elephant.</li>
+            <li> Be careful not to base your answer off the actual colour of the elephant, otherwise it'll be incorrect.</li>
             <li> You gain a point for each correct answer.</li>
             <li> Be quick as you only have 30 seconds to complete the task!</li>
         </ul>
     </div>
+
     <!-- Sign up form to be updated on different games to come. -->
     <div id="Sign-up">
 		<h2>Sign Up</h2>
 		<p id="email-text">Sign up to our newsletter and be the first to hear about our other exciting games coming to you soon!</p>
 		<form id="email-sign-up">
 			<label for="email">
-            <span class="enter-email">Enter email address:</span></label>
+                <span class="enter-email">Enter email address:</span>
+            </label>
 			<input type="email" id="email" name="email" required />
 			<input type="button" id="sign-up-submit" value="Sign Up!" />
         </form>
-	</div>
+    </div>
+    
     <!-- Footer with social media and a email links, for the parent or teacher. -->
     <footer>
 		<ul class="footer-links">
@@ -95,8 +110,10 @@
 					<i class="fa fa-envelope" aria-hidden="true"></i></a>
 			</li>
 		</ul>
-	</footer>
+    </footer>
+    
     <script src="assets/js/main.min.js"></script>
+
 </body>
 
 </html>

@@ -1,4 +1,4 @@
-<h1> The Colourful Animal Game </h1>
+<h1> Colourful Elephants </h1>
 
 <h2> MS2 project - Interactive front-end development </h2>
 
@@ -110,3 +110,8 @@ Since my audience will mainly be younger people I have decided to go with a jung
 - Balsamiq Wireframes
 - Google chrome developer tools
 - Gitpod
+
+
+
+
+http://clipart-library.com/search2/?q=blue%20elephant#gsc.tab=1&gsc.q=blue%20elephant&gsc.page=1
