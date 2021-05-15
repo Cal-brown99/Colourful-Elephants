@@ -1,59 +1,112 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+<h1> The Colourful Animal Game </h1>
 
-Welcome USER_NAME,
+<h2> MS2 project - Interactive front-end development </h2>
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+This is a basic matching test for a children, it's designed to encourage younger people to have fun whilst being educated and stimulating their brain. 
+I have created a jungle like theme to make the web pag as colourful and enticing as possible. The game itself is not as traight forward as you might
+think as there will be a 30 second timer from once you click the button and the aim of the game is to match what text appears (A colour) with the
+text inside the animal. However the 6 animals themselves can be coloured in a different colour as to what the text inside them reads. There'll be a 
+score tally at the bottom of the screen to collate the results.
 
-## Gitpod Reminders
+<h3> Table of contents: </h3>
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+<li>
 
-`python3 -m http.server`
+<ul> 1) UX </ul>
 
-A blue button should appear to click: _Make Public_,
+<ul> 2) Features </ul>
 
-Another blue button should appear to click: _Open Browser_.
+<ul> 3) Technologies used </ul>
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+<ul> 4) Testing </ul>
 
-A blue button should appear to click: _Make Public_,
+<ul> 5) Deployment </ul>
 
-Another blue button should appear to click: _Open Browser_.
+<ul> 6) Credit </ul>
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+</li>
 
-To log into the Heroku toolbelt CLI:
+<h2> User Experince (UX) </h2>
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+<h3> Strategy: </h3>
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidently make it public then you can create a new one with _Regenerate API Key_.
+<p>
+I understand that my target audience is young children, who will be difficult to hold their attention. With this in mind I need to make the website 
+with powerful, bold colours that will initially grab the kids eyes. Furthermore I am creating a jungle based theme with animals and forest like 
+structure to my web page to keep their attention focused on the screen, after I've initially drawn them in.
+</p>
+<p>
+I have researched different childrens games to see what sort of difficulty, as well as what features are likely to be appropriate for my game.
+After this I concluded that a few simple colours alog with some animals and a straightforward game with a slight twist to catch people out should
+should suffice in the childrens satisfaction and simultaneously stimulating their brains.
+</p>
 
-## Updates Since The Instructional Video
+<h3> Scope: </h3>
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+This is a fun game with the intent on stimulating the youth's brains and to bring about a bit of competitiveness to see who can be the reigning champ!
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+<h3> Visitor goals </h3>
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+1) As a visitor who wants to have fun:
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+- I want to be able to dive straight into the game with little effort.
+- I want to be drawn in by what the game has to offer.
+- I want to be able to easily understand the rules of the game and have perfect clarity on what to do.
+- I want there to be an element of competitiveness with a score sheet and a highscore to show to my friends.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+2) As a visitor who wants to stimulate their brain:
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+- I want to be tested in this game in a way where I don't always get the answers right.
+- I want to have a goal to try and beat, with a score-sheet you can never reach the end.
+- I want to be multi-tasking to try and use a lot of my brain power, thus exercising the muscles.
+- I want to be exposed to many different elements such as colours, shapes, all whilst trying to complete a task.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+<h3> Owner goals </h3>
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+- I want to bring joy to children around the world through my game.
+- I want to stimulate children's brains and to have an educational purpose to it (The use of my game in schools to warm up kids for a lesson).
+- I want to improve the children's perception and multitasking skills.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+<h3> Structure: </h3>
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+<p>
+I have designed my website to be a game of simplicity, yet with a subtle twist in it to catch out those eager to answer children. I have made sure 
+not to overload them with too much boring details or information, in doing this I will be drawing in and keeping more people's attention for longer.
+I have created a jungle like theme as I know through my research that most kids love animals and will want to interact with them, this also provides
+nice styling to my website and brings about a friendly environment suitable for children.
+</p>
+<p>
+In addition I have made sure to add in a lot of user interactivity, through javascript with elements such as a button that displays a question mark
+but when pressed upon, it toggles a piece of text which turns out to be the rules. I have used animals that will be in different colours, this is
+what the user will have to click upon to select their answer and after that the animals will rotate colour and the text inside them will change to
+ keep the game more interactive.
+</p>
 
----
+<h3> Structure: </h3>
 
-Happy coding!
+Home page - This page displays a nice theme to set the tone of the game with a forest strucutre to take the user away from wherever they may be 
+            playing from. In the centre lays a simple button with some text "Lets Play!" in large font to reel in most of the focus to that area.
+            Furthermore there will be a set of rules at the bottom of the page so that the user is not at all confused as to hat to do.
+
+Game page - This contains the game itself as well as the majority of the user interactivity, there's a score-sheet at the bottom left (Correct answers) 
+            as well as the bottom right (Incorrect answers) and then a timer at the bottom middle that will be counting down from 30 seconds. A piece 
+            of text will be displayed at the top middle section of the page and this will display the colour that it wants you to match and if you 
+            are unsure at any time about how to play the game, there's a little question mark button in the top left corner of the screen, that toggles
+            the rules once clicked.
+
+<h3> Surface: </h3>
+
+Since my audience will mainly be younger people I have decided to go with a jungle based theme to attract kids with an exciting, adventurous style to it.
+
+
+<h2>Technologies & sites used:</h2>
+
+- HTML
+- CSS 
+- Bootstrap
+- Font awesome
+- Google font
+- free colour picker
+- Balsamiq Wireframes
+- Google chrome developer tools
+- Gitpod

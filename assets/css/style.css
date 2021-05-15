@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Texturina:wght@100&display=swap');
+
+/*------------------------------------------------------------------------ Body */
+
+body {
+    background-color: #0A420A;
+}
+
+/*------------------------------------------------------------------------ Header */
+
+.title {
+    text-align: center;
+    color: #D4E00B;
+    font-family: "Texturina", sans-serif;
+    font-weight: 100;
+}
+
+.title-border {
+    border-style: groove;
+    border-radius: 5px;
+    border-color: slategray;
+    background-color: #261101;
+    margin: auto;
+    margin-top: 30px;
+    padding: 5px;
+}
+
+/*------------------------------------------------------------------------ Home Text */
+
+.message-area {
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin-top: -80px;
+    padding: 10%;
+}
+
+.message-content {
+    color: #D4E00B;
+    font-size: 130%;
+    font-family: "Texturina", "sans-serif";
+    padding: 2%;
+    margin: 0;
+}
