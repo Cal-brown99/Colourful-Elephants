@@ -56,9 +56,22 @@
         
     </header>
 
-    <!-- Game will be displayed here and the timer with the score. -->
+    <!-- Form to enter name for the leaderboards as well as your latest score. -->
+    <div id="playerCredentials" class="d-none">
+		Colourful Elephants
+		<form id="player-form">
+			<label for="player-name">
+            <span class="enter-name">Enter player name:</span></label>
+			<input type="text" id="player-name" name="player-name" required />
+			<input type="submit" id="submit" value="Let's Play!" />
+      </form>
+			<div id="current-score-panel">Score: <span id="current-score">0</span>
+			</div>
+			<div id="scores"></div>
+	</div>
+    <!-- The game will be displayed here and the timer with the score. -->
     <div id="game-area">
-		<div id="main-gameboard" class="game-board d-none">
+		<div id="main-gameBoard" class="game-board d-none">
 			<div class="game-info">
 				<div class="time-answers"> Time <span id="time-left"></span></div>
                 <div class="time-answers"> Correct answers :) <span id="right">0</span></div>

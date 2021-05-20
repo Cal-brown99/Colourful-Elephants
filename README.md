@@ -113,5 +113,5 @@ Since my audience will mainly be younger people I have decided to go with a jung
 
 
 
-
+https://talesfortadpoles.ie/blogs/news/10-lessons-from-elmer-the-elephant
 http://clipart-library.com/search2/?q=blue%20elephant#gsc.tab=1&gsc.q=blue%20elephant&gsc.page=1

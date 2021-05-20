@@ -18,6 +18,7 @@ body {
   width: 100%;
   text-align: center;
   background-position: center;
+  z-index: 1000;
 }
 
 .nav-link p {
@@ -52,9 +53,69 @@ body {
   display: none;
 }
 
+/*------------------------------------------------------------------------ Enter name & Latest score form */
+
+#playerCredentials {
+  display: block;
+  position: fixed;
+  padding: 5%;
+  text-align: center;
+  justify-content: center;
+  transform: scale(1);
+  z-index: 9999;
+  background-color: black;
+  font-family: "Texturina", "Sans-serif";
+  font-size:350%;
+  color: yellow;
+}
+
+#current-score-panel {
+    display: hidden;
+    font-family: "Texturina", "Sans-serif";
+    color: #261101;
+    font-size: 80%;
+    padding: 1% 0 1% 0;
+}
+
+#player-name {
+    width: 30%;
+    margin-bottom: 2%;
+}
+
+#player-form {
+    margin-bottom: 1%;
+}
+
+#player-form label {
+    width: 100%;
+}
+ 
+.enter-name {
+    color: yellow;
+    font-family: "Texturina", "Sans-serif";
+    font-size: 70%;
+    margin-bottom: 2%;
+}
+
 /*------------------------------------------------------------------------ Game area */
 
+.game-info {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+}
 
+.game-area {
+  display: grid;
+  grid-template-columns: 100px, 100px, 100px;
+  grid-template-rows: 100px, 100px;
+  grid-gap: 50px;
+  margin: 10%;
+  justify-content: center;
+  perspective: 500px;
+  position: relative;
+  z-index: 5;
+}
 
 /*------------------------------------------------------------------------ Rules */
 
@@ -62,6 +123,8 @@ body {
     display: block;
     width: 100%;
     padding: 10%;
+    z-index: 5;
+    position: relative;
 }
 
 .rules-text {
@@ -92,6 +155,8 @@ h2 {
     color: #261101;
     font-size: 120%;
     text-align: center;
+    position: relative;
+    z-index: 5;
   
 }
 
@@ -123,6 +188,7 @@ footer {
   margin: 0;
   padding: 1%;
   background-color: #261101;
+  z-index: 5;
   position: fixed;
   align-content: center;
   bottom: 0;
