@@ -164,21 +164,13 @@ class Game {
                     </span>`;
     }
 
-//   <span class="x">
-//   <a id="videolink" href="http://www.youtube.com/watch?v=ImTTW94ZicM" class="video-class" target="_blank">
-//    <img src="https://i.ytimg.com/vi/ImTTW94ZicM/mqdefault.jpg"  border="2px" alt="Video" />
-//    <img class="videoicon"  src="http://vignette3.wikia.nocookie.net/plazmabursttwo/images/a/a8/Play_button.png/revision/latest?cb=20121111212438" data-pin-nopin="true" />
-//   </a>  
-// </span>
-
-    appendCard(element, label, id) {
+    appendCards(element, label, id) {
         elephants.forEach((color) => {
             element.insertAdjacentHTML("beforeend", this.renderCard(color, label, color));
             let el = document.getElementById(color);
             el.addEventListener("click", this.onClickCard.bind(this));
         });
         // insertAdjacentHTML inserts the HTML from the renderCard function for each item in the concatenated allCards array using the appropriate image file
-    }
 
     let cards = Array.from(document.getElementsByClassName("cards"));
 

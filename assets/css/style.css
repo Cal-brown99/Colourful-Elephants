@@ -61,6 +61,7 @@ body {
     text-align: center;
     justify-content: center;
     background-color: #0A420A;
+    min-height: fit-content;
     z-index: 4000;
     font-family: "Texturina", "Sans-serif";
     font-size: 350%;
@@ -208,7 +209,7 @@ footer {
     margin: 0;
     padding: 1%;
     background-color: #261101;
-    z-index: 5;
+    z-index: 2000;
     position: fixed;
     align-content: center;
     bottom: 0;

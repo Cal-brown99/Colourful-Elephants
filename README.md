@@ -1,11 +1,11 @@
-<h1> Colourful Elephants </h1>
+# Colourful Elephants
 
 <h2> MS2 project - Interactive front-end development </h2>
 
 This is a basic matching test for a children, it's designed to encourage younger people to have fun whilst being educated and stimulating their brain. 
 I have created a jungle like theme to make the web pag as colourful and enticing as possible. The game itself is not as traight forward as you might
 think as there will be a 30 second timer from once you click the button and the aim of the game is to match what text appears (A colour) with the
-text inside the animal. However the 6 animals themselves can be coloured in a different colour as to what the text inside them reads. There'll be a 
+text inside the elephant. However the 6 elephants themselves can be coloured in a different colour as to what the text inside them reads. There'll be a 
 score tally at the bottom of the screen to collate the results.
 
 <h3> Table of contents: </h3>
@@ -22,7 +22,7 @@ score tally at the bottom of the screen to collate the results.
 
 <ul> 5) Deployment </ul>
 
-<ul> 6) Credit </ul>
+<ul> 6) Credits </ul>
 
 </li>
 
@@ -82,22 +82,65 @@ what the user will have to click upon to select their answer and after that the 
  keep the game more interactive.
 </p>
 
-<h3> Structure: </h3>
+<h3> Skeleton: </h3>
 
-Home page - This page displays a nice theme to set the tone of the game with a forest strucutre to take the user away from wherever they may be 
+Home page - <p>
+            This page displays a nice theme to set the tone of the game with a forest strucutre to take the user away from wherever they may be 
             playing from. In the centre lays a simple button with some text "Lets Play!" in large font to reel in most of the focus to that area.
             Furthermore there will be a set of rules at the bottom of the page so that the user is not at all confused as to hat to do.
-
-Game page - This contains the game itself as well as the majority of the user interactivity, there's a score-sheet at the bottom left (Correct answers) 
+            </p>
+            <p>
+            This contains the game itself as well as the majority of the user interactivity, there's a score-sheet at the bottom left (Correct answers) 
             as well as the bottom right (Incorrect answers) and then a timer at the bottom middle that will be counting down from 30 seconds. A piece 
             of text will be displayed at the top middle section of the page and this will display the colour that it wants you to match and if you 
             are unsure at any time about how to play the game, there's a little question mark button in the top left corner of the screen, that toggles
             the rules once clicked.
+            </p>
+
+### Wireframes
+The desktop and mobile wireframes for this project are located in the 'wireframe' folder:
+* [Colour Matching Wireframe](wireframes/colour-matching.pdf)
+<br><br>
 
 <h3> Surface: </h3>
 
-Since my audience will mainly be younger people I have decided to go with a jungle based theme to attract kids with an exciting, adventurous style to it.
+Since my audience will mainly be younger people I have decided to go with a jungle based theme to attract kids with an exciting, adventurous style to it. <br>
+The google font 'Texturina' was used to have a nice stylish kids game feel to it. <br>
+The website favicon contains Elma the elephant, which relates to the game as it is all to do with coloured elephants. It also gives the game the capability 
+to build on this in the future to become a brand for potential merchandise opportunities. <br>
+The game interface is quite basic as you want things to be very straight forward for children.
 
+<h2>Features:</h2>
+
+<h3>Current Features</h3>
+
+<h4>Initial Page</h4>
+
+User is shown the player name form as well as the leaderboard for the game directly below it. Once the user types their name in and clicks the button it will start the game.
+
+<h4>Navigation Bar</h4>
+I chose to have a fixed inline navbar that was created using Bootstrap. My desktop navbar consists of a description "Colour Matching!" and then a "Play", 
+"Rules" and "sign Up" button that directs you to where they are on the page. In a mobile device I have used Font Awesome icons to represent the three different
+links to be more user friendly.
+
+<h4>Main Game Area</h4>
+The game area consists of a 3x2 grid (Desktop) 2x3 grid (Mobile) with an image of an elephant in each, a piece of text naming a colour will appear at the top of the grid.
+All elephants consists of different colours, there's a timer on top of this grid counting down from 30 seconds, as well as an incorrect and correct score tally. Once a
+card is clicked they will all change colour as well as te text within them.
+
+<h4>Rules</h4>
+Includes details of how to play the game, so that everyone has perfect clarity on how to get the bet score.
+
+<h4>Sign Up</h4>
+Straight forward form to enter an email address and be informed of future games and updates to come.
+
+<h3>Possible Future Features</h3>
+
+<h4>Audio</h4>
+I would like to implement elephant noises as you cick on the images to make it a little more user friendly and interactive.
+
+<h4>Different maps</h4>
+It would keep the users interest if I was to create different maps in terms of changing the theme from elephants to footballs or anything that I believe kids will be interested in.
 
 <h2>Technologies & sites used:</h2>
 
@@ -111,7 +154,68 @@ Since my audience will mainly be younger people I have decided to go with a jung
 - Google chrome developer tools
 - Gitpod
 
+<h2> Testing: </h2>
+
+<h3> CSS </h3>
+<p>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss"
+            alt="Valid CSS!" />
+    </a>
+</p>
+
+<h3> HTML </h3>
+
+https://validator.w3.org/nu/#textarea
+
+<h3> JS </h3>
+
+
+
+<h2> Deployment: </h2>
+This project was developed in GitPod IDE, committed to git and pushed to GitHub. The Master Branch is the branch used for development of this project.
+
+The following steps were taken to deploy Match it to GitHub Pages from the GitHub repository:
+
+* Log in to GitHub.
+* Select  from the list of repositories.
+* From the repository menu, select 'Settings'.
+* Scroll down the 'Options' page (it opens on this page by default) to the 'GitHub Pages' section.
+* Under 'Source' select 'master branch' from the drop-down menu.
+* This updates the page and deploys the website.
+* Scroll down to the GitHub Pages section again to view the link to the deployed website - <br>
+<br>
+
+To clone this  from GitHub to run it locally:
+* Go to the  repository [here](https://github.com/Cal-brown99/Colourful-Elephants).
+* Click on the green 'Clone' button under the repository menu.
+* Copy the clone URL.
+* Open your local IDE.
+* Open the terminal and change the current working directory to the location where you want to store the cloned directory.
+* Using 'git clone', paste the clone URL into the terminal and click the return key.<br>
+This creates a local clone of the project.<br><br>
+
+<h2>Project Credits</h2>
+
+I learned the key concepts of HTML, CSS and Javascript in the Code Institute course materials and read further material in [Eloquent Javascript](https://eloquentjavascript.net/) and [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/JavaScript) to support my learning and improve my knowledge of Javascript. <br>
+
+<h3>Media</h3>
+
+* All of my images were taken from [this website](http://clipart-library.com/search2/?q=blue%20elephant#gsc.tab=1&gsc.q=blue%20elephant&gsc.page=1)
+
+I found information for some specific features used in the game from the following sources:
+* [Inserting HTML to create the game cards](https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML)
+* [Fisher-Yates Shuffle Algorithm to shuffle the cards array](https://medium.com/@qjawe/js-shuffle-cards-or-any-elements-with-the-fisher-yates-shuffle-algorithm-b70750c497d5)
+* [Setting the countdown timer](https://www.w3schools.com/js/js_timing.asp)
+* [Grid layout and properties](https://www.w3schools.com/css/css_grid.asp)
+<br>
+
+I used resources like [Stack Overflow](https://stackoverflow.com/) and [W3Schools](https://www.w3schools.com/) for help with troubleshooting smaller coding issues during the project, as well as support from Code Institute tutors and guidance from my mentor.
+
+<br><br><br>
+[Back to Top](#colourful-elephants)
+
 
 
 https://talesfortadpoles.ie/blogs/news/10-lessons-from-elmer-the-elephant
-http://clipart-library.com/search2/?q=blue%20elephant#gsc.tab=1&gsc.q=blue%20elephant&gsc.page=1
