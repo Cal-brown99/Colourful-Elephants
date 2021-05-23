@@ -8,7 +8,7 @@ const elephants = [
 ];
 
 const gameTime = 30; /*------------------------------------------------------------------------ Time given to play the game */
-const gameId = "game";
+const gameId = "board-game";
 
 class Game {
     constructor(totalTime) {
@@ -22,14 +22,14 @@ class Game {
         this.playerCredentials = document.getElementById("playerCredentials");
         this.gamePanel = document.getElementById("main-gameBoard");
         this.checkCard = null;
-        // this.addListeners();
+        this.addListeners();
     }
 
     /*------------------------------------------------------------------------ Starts the game function when the player submits a name */
 
     start() {
         this.loadConfiguration();
-        this.showPlayerForm();
+        this.showPlayerCredentials();
     }
 
     addListeners() {
@@ -49,10 +49,6 @@ class Game {
         }
     }
 
-    showRules() {
-        let rules = getElementById("#rules");
-    }
-
     startGame() {
         this.checkCard = null;
         this.score = 0;
@@ -66,18 +62,23 @@ class Game {
         }, 30);
         this.timer.innerText = this.timeLeft;
         this.turns.innerText = this.score;
-        this.showBoardPanel();
+        this.showGamePanel();
         this.appendCards();
         this.subscribeButton();
     }
 
-    onStartGameHandler(event) {
-        event.stopImmediatePropagation();
-        event.preventDefault();
-        // Assigns the current player's name to the configuration object to start the game
-        this.configuration.playerName = event.target[0].value;
-        //Starts the game
-        this.startGame();
+    /*------------------------------------------------------------------------ This allows player names and scores to be loaded from the users local storage */
+
+    showPlayerCredentials() {
+        document.getElementById("playerName").value = this.configuration.playerName;
+        this.renderScores();
+        this.gamePanel.classList.toggle("d-none", true);
+        this.playerCredentials.classList.toggle("d-none", false);
+    }
+
+    showGamePanel() {
+        this.playerCredentials.classList.toggle("d-none", true);
+        this.gamePanel.classList.toggle("d-none", false);
     }
 
     checkForMatch(card) {
@@ -114,20 +115,6 @@ class Game {
         }
     }
 
-/*------------------------------------------------------------------------ This allows player names and scores to be loaded from the users local storage */
-
-    showPlayerForm() {
-        document.getElementById("playerName").value = this.configuration.playerName;
-        this.renderScores();
-        this.gamePanel.classList.toggle("d-none", true);
-        this.playerPanel.classList.toggle("d-none", false);
-    }
-
-    showGamePanel() {
-        this.playerPanel.classList.toggle("d-none", true);
-        this.gamePanel.classList.toggle("d-none", false);
-    }
-
     renderScores() {
         let scoresContainer = document.getElementById("scores");
         if (scoresContainer.firstElementChild) {
@@ -154,6 +141,87 @@ class Game {
         });
         table.appendChild(tblBody);
         scoresContainer.appendChild(table);
+    }
+
+    onStartGameHandler(event) {
+        event.stopImmediatePropagation();
+        event.preventDefault();
+        // Assigns the current player's name to the configuration object to start the game
+        this.configuration.playerName = event.target[0].value;
+        //Starts the game
+        this.startGame();
+    }
+
+    renderCard(color, label, id) {
+        return `<div class="cards">
+                    <span class="card" id="${id}"> 
+                        <img class="card-value card-img" src="assets/images/${color}-elephant.png" alt="Picture card">
+                            <spam class="card-label">${label}</spam>
+                    </span>
+                    <span class="card small" id="${id}"> 
+                        <img class="card-value card-img" src="assets/images/${color}-elephant.png" alt="Picture card">
+                            <spam class="card-label">${label}</spam>
+                    </span>`;
+    }
+
+//   <span class="x">
+//   <a id="videolink" href="http://www.youtube.com/watch?v=ImTTW94ZicM" class="video-class" target="_blank">
+//    <img src="https://i.ytimg.com/vi/ImTTW94ZicM/mqdefault.jpg"  border="2px" alt="Video" />
+//    <img class="videoicon"  src="http://vignette3.wikia.nocookie.net/plazmabursttwo/images/a/a8/Play_button.png/revision/latest?cb=20121111212438" data-pin-nopin="true" />
+//   </a>  
+// </span>
+
+    appendCard(element, label, id) {
+        elephants.forEach((color) => {
+            element.insertAdjacentHTML("beforeend", this.renderCard(color, label, color));
+            let el = document.getElementById(color);
+            el.addEventListener("click", this.onClickCard.bind(this));
+        });
+        // insertAdjacentHTML inserts the HTML from the renderCard function for each item in the concatenated allCards array using the appropriate image file
+    }
+
+    let cards = Array.from(document.getElementsByClassName("cards"));
+
+        cards.forEach((cards) => {
+            cards.addEventListener("click", () => {
+                this.popSound();
+            });
+        });
+        this.fullDeck = cards; // Declares a new array of HTML cards for the game
+    }
+
+    startCountDown() {
+        return setInterval(() => {
+            this.timeLeft--;
+            this.timer.innerText = this.timeLeft;
+            if (this.timeLeft === 0) 
+                this.gameOver(); // Ends game when countdown reaches 0
+        }, 30);
+    }
+
+    gameFinished() {
+        clearInterval(this.countDown);
+        // Removes remaining cards from the board
+        this.removeCards();
+        this.showPlayerPanel();
+    }
+
+    currentScore() {
+        let currentScore = document.getElementById('current-score');
+        currentScore.innerText = this.totalTurns;
+    }
+
+    gameOver() {
+        this.renderScores();
+        this.boardPanel.classList.toggle("d-none", true);
+        this.playerPanel.classList.toggle("d-none", false);
+        this.gameFinished();
+    }
+
+    gameWin() {
+        this.currentScore();
+        this.updateScores();
+        this.gameFinished();
     }
 
     updateScores() {
@@ -187,26 +255,6 @@ class Game {
             return 0;
         });
 
-    renderCard(color, label, id) {
-        return `<div class="card" id="${id}"> 
-                    <div class="card-image">
-                        <img class="card-value card-img" src="assets/images/${color}-elephant.png" alt="Picture card">
-                    </div>
-                    <div class="card-title">
-                        <spam class="card-label">${label}</spam>
-                    </div>
-                </div>`;
-    }
-
-    appendCard(element, label, id) {
-        elephants.forEach((color) => {
-            element.insertAdjacentHTML("beforeend", this.renderCard(color, label, color));
-            let el = document.getElementById(color);
-            el.addEventListener("click", this.onClickCard.bind(this));
-        });
-        // insertAdjacentHTML inserts the HTML from the renderCard function for each item in the concatenated allCards array using the appropriate image file
-    }
-
     onClickCard(event) {
         console.log(event);
         let node = event.target;
@@ -215,16 +263,7 @@ class Game {
         }
         node.remove();
     }
-
-//     <span class="x">
-//   <a id="videolink" href="http://www.youtube.com/watch?v=ImTTW94ZicM" class="video-class" target="_blank">
-//    <img src="https://i.ytimg.com/vi/ImTTW94ZicM/mqdefault.jpg"  border="2px" alt="Video" />
-//    <img class="videoicon"  src="http://vignette3.wikia.nocookie.net/plazmabursttwo/images/a/a8/Play_button.png/revision/latest?cb=20121111212438" data-pin-nopin="true" />
-//   </a>  
-// </span>
-
 }
 
-const game = new Game(30);
-
-game.appendCard(document.getElementById("playerCredentials"), "Test", "card1");
+const game = new Game(gameTime);
+game.start();
