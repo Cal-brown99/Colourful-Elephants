@@ -16,7 +16,7 @@
     
     <header>
     <!-- Navigation bar for the desktop, loaded once user has clicked play. -->
-        <nav class="navbar navbar-expand navbar-bg fixed-top">
+        <nav class="navbar navbar-expand navbar-bg fixed-top d-none">
 			<div id="desktop-nav" class="desktop-nav">
 				<ul class="navbar-nav mr-auto">
 					<li id="logo">Colour Matching!</li>
@@ -57,12 +57,12 @@
     </header>
 
     <!-- Form to enter name for the leaderboards as well as your latest score. -->
-    <div id="playerCredentials" class="d-none">
+    <div id="playerCredentials">
 		Colourful Elephants
 		<form id="player-form">
-			<label for="player-name">
+			<label for="playerName">
             <span class="enter-name">Enter player name:</span></label>
-			<input type="text" id="player-name" name="player-name" required />
+			<input type="text" id="playerName" name="playerName" required />
 			<input type="submit" id="submit" value="Let's Play!" />
       </form>
 			<div id="current-score-panel">Score: <span id="current-score">0</span>
@@ -71,7 +71,7 @@
 	</div>
     <!-- The game will be displayed here and the timer with the score. -->
     <div id="game-area">
-		<div id="main-gameBoard" class="game-board d-none">
+		<div id="main-gameBoard" class="game-board">
 			<div class="game-info">
 				<div class="time-answers"> Time <span id="time-left"></span></div>
                 <div class="time-answers"> Correct answers :) <span id="right">0</span></div>
@@ -95,7 +95,7 @@
     </div>
 
     <!-- Sign up form to be updated on different games to come. -->
-    <div id="Sign-up">
+    <div id="sign-up">
 		<h2>Sign Up</h2>
 		<p id="email-text">Sign up to our newsletter and be the first to hear about our other exciting games coming to you soon!</p>
 		<form id="email-sign-up">
@@ -125,7 +125,7 @@
 		</ul>
     </footer>
     
-    <script src="assets/js/main.min.js"></script>
+    <script src="assets/js/main.js"></script>
 
 </body>
 

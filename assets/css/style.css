@@ -10,67 +10,64 @@ body {
 /*------------------------------------------------------------------------ Navigation bar */
 
 .navbar {
-  font-family: "Texturina", "Sans-sarif";
-  font-size: 300%;
-  color: yellow;
-  background-color: #261101;
-  display: inline;
-  width: 100%;
-  text-align: center;
-  background-position: center;
-  z-index: 1000;
+    font-family: "Texturina", "Sans-sarif";
+    font-size: 300%;
+    color: yellow;
+    background-color: #261101;
+    display: inline;
+    width: 100%;
+    text-align: center;
+    background-position: center;
 }
 
 .nav-link p {
-  font-family: "Texturina", "Sans-serif";
-  font-size: 50%;
-  color: yellow;
+    font-family: "Texturina", "Sans-serif";
+    font-size: 50%;
+    color: yellow;
 }
 
 .nav-item {
-  color: yellow;
-  margin: 1% 5% 1% 5%;
+    color: yellow;
+    margin: 1% 5% 1% 5%;
 }
 
 .mobile-nav {
-  font-size: 100%;
-  max-width: 100%;
-  text-align: center;
+    font-size: 100%;
+    max-width: 100%;
+    text-align: center;
 }
 
 #logo-mobile {
-  font-family: "Texturina", "Sans-serif";
-  font-size: 60%;
-  color: yellow;
+    font-family: "Texturina", "Sans-serif";
+    font-size: 60%;
+    color: yellow;
 }
 
 .mobile-nav i {
-  font-size: 100%;
-  color: yellow;
+    font-size: 100%;
+    color: yellow;
 }
 
 #mobile-nav {
-  display: none;
+    display: none;
 }
 
 /*------------------------------------------------------------------------ Enter name & Latest score form */
 
 #playerCredentials {
-  display: block;
-  position: fixed;
-  padding: 5%;
-  text-align: center;
-  justify-content: center;
-  transform: scale(1);
-  z-index: 9999;
-  background-color: black;
-  font-family: "Texturina", "Sans-serif";
-  font-size:350%;
-  color: yellow;
+    display: block;
+    position: fixed;
+    padding: 5%;
+    text-align: center;
+    justify-content: center;
+    background-color: #0A420A;
+    z-index: 4000;
+    font-family: "Texturina", "Sans-serif";
+    font-size: 350%;
+    color: yellow;
 }
 
 #current-score-panel {
-    display: hidden;
     font-family: "Texturina", "Sans-serif";
     color: #261101;
     font-size: 80%;
@@ -89,7 +86,7 @@ body {
 #player-form label {
     width: 100%;
 }
- 
+
 .enter-name {
     color: yellow;
     font-family: "Texturina", "Sans-serif";
@@ -100,21 +97,19 @@ body {
 /*------------------------------------------------------------------------ Game area */
 
 .game-info {
-  grid-column: 1 / -1;
-  display: flex;
-  justify-content: space-between;
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
 }
 
-.game-area {
-  display: grid;
-  grid-template-columns: 100px, 100px, 100px;
-  grid-template-rows: 100px, 100px;
-  grid-gap: 50px;
-  margin: 10%;
-  justify-content: center;
-  perspective: 500px;
-  position: relative;
-  z-index: 5;
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    grid-gap: 50px;
+    margin: 10%;
+    justify-content: center;
+    perspective: 500px;
+    position: relative;
 }
 
 /*------------------------------------------------------------------------ Rules */
@@ -123,14 +118,14 @@ body {
     display: block;
     width: 100%;
     padding: 10%;
-    z-index: 5;
     position: relative;
+    z-index: 1;
 }
 
 .rules-text {
     color: #261101;
     font-size: 120%;
-    font-family: "Texturina", sans-serif;  
+    font-family: "Texturina", sans-serif;
     padding: 2%;
     margin: 0;
     margin-left: 500px;
@@ -151,13 +146,13 @@ h2 {
     width: 100%;
     padding: 5%;
     margin: 0 0 5% 0;
-    font-family: "Texturina", "Sans-serif";  
+    font-family: "Texturina", "Sans-serif";
     color: #261101;
     font-size: 120%;
     text-align: center;
     position: relative;
     z-index: 5;
-  
+
 }
 
 #email-text {
@@ -169,9 +164,9 @@ h2 {
 }
 
 #email-sign-up {
-     font-family: "Texturina", "Sans-serif";
-     margin-bottom: 20px;
-     text-align: center;
+    font-family: "Texturina", "Sans-serif";
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .enter-email {
@@ -183,102 +178,122 @@ h2 {
 /*------------------------------------------------------------------------ Footer */
 
 footer {
-  height: 80px;
-  width: 100%;
-  margin: 0;
-  padding: 1%;
-  background-color: #261101;
-  z-index: 5;
-  position: fixed;
-  align-content: center;
-  bottom: 0;
-  left: 0;
+    height: 80px;
+    width: 100%;
+    margin: 0;
+    padding: 1%;
+    background-color: #261101;
+    z-index: 5;
+    position: fixed;
+    align-content: center;
+    bottom: 0;
+    left: 0;
 }
 
 .footer-links {
-  text-align: center;
+    text-align: center;
 }
 
 .footer-links li {
-  display: inline;
-  margin: 10px;
+    display: inline;
+    margin: 10px;
 }
 
 .footer-links i {
-  font-size: 200%;
-  margin: 0;
-  padding: 0.5%;
-  color: yellow;
+    font-size: 200%;
+    margin: 0;
+    padding: 0.5%;
+    color: yellow;
 }
 
 /*------------------------------------------------------------------------ Media Queries */
 
 @media only screen and (max-width:950px) {
 
-/*------------------------------------------------------------------------ Media Queries - Navigation bar */
+    /*------------------------------------------------------------------------ Media Queries - Navigation bar */
 
-#desktop-nav {
-    display: none;
+    #desktop-nav {
+        display: none;
+    }
+
+    #mobile-nav {
+        display: block;
+        max-height: 50px;
+        padding: 0;
+    }
+
+    .nav-item {
+        font-size: 50%;
+        margin-top: -3px;
+    }
+
+    /*------------------------------------------------------------------------ Media Queries - Rules */
+
+    #rules {
+        padding-top: 25%;
+        font-size: 70%;
+    }
+
+    .rules-text {
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    /*------------------------------------------------------------------------ Media Queries - Sign up form */
+
+    #sign-up {
+        margin-bottom: 70px;
+        padding: 6%;
+        border: none;
+    }
+
+    #enter-email {
+        padding: 5%;
+    }
+
+    #email-text {
+        font-size: 100%;
+        padding: 5px;
+        margin: 0;
+    }
+
+    #sign-up-submit {
+        margin-top: 2%;
+    }
+
+    #email {
+        width: 70%;
+    }
+
+    /*------------------------------------------------------------------------ Media Queries - Footer */
+
+    footer {
+        max-width: 100%;
+        max-height: 50px;
+    }
+
+    .social-links {
+        margin: 0;
+        padding: 0;
+    }
 }
 
-#mobile-nav {
-    display: block;
-    max-height: 50px;
-    padding: 0;
+div.card {
+  display: block;
+  position: relative;
+  height: 220px;
+  width: 220px;
+}
+.card img {
+  width: 100%;
+  height: 100%;
+}
+.card .card-title {
+  position: absolute;
+  top:calc(50% - 20px);
+  left:calc(50% - 20px);
 }
 
-.nav-item {
-    font-size: 50%;
-    margin-top: -3px;
-}
-
-/*------------------------------------------------------------------------ Media Queries - Rules */
-
-#rules {
-    padding-top: 25%;
-    font-size: 70%;
-}
-
-.rules-text {
-    width: 100%;
-    margin-left: 0px;
-}
-
-/*------------------------------------------------------------------------ Media Queries - Sign up form */
-
-#sign-up {
-    margin-bottom: 70px;
-    padding: 6%;
-    border: none;
-}
-
-#enter-email {
-    padding: 5%;
-}
-
-#email-text {
-    font-size: 100%;
-    padding: 5px;
-    margin: 0;
-}
-
-#sign-up-submit {
-    margin-top: 2%;
-}
-
-#email {
-    width: 70%;
-}
-
-/*------------------------------------------------------------------------ Media Queries - Footer */
-
-footer {
-    max-width: 100%;
-    max-height: 50px;
-}
-
-.social-links {
-  margin: 0;
-  padding:0;
-}
+ul {
+    background-position: center;
 }
